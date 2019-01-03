@@ -10,30 +10,43 @@ class Stack
         $stack=array();
     }
 
-    function push($item)
+    public function push($item)
     {
         
         $this->stack[$this->position++] = $item;
 
     }
-    function pop()
+    public function pop()
     {
         unset($this->stack[sizeof($this->stack)-1]);
     }
 
-    function isEmpty($stack)
+    public function isEmpty($stack)
     {
 
     }
 
-    function display()
-    {
-        for($i=sizeof($this->stack)-1;$i>=0;$i--)
+    public function display()
+    {   
+        if (empty($this->stack)) 
         {
-            echo $this->stack[$i]. "\n";
+            echo "Stack is empty";
+        }
+        else
+        {
+            for($i=sizeof($this->stack)-1;$i>=0;$i--)
+            {
+                echo $this->stack[$i]. "\n";
+            }
         }
     }
+
+    public function reset()
+    {
+        $this->stack=array();
+    }
 }
+
 
 $newStack= new Stack;
 
@@ -46,9 +59,14 @@ $newStack->push(100);
 $newStack->push(110);
 
 
-echo $newStack->display()."<br/>";
+echo $newStack->display()."\n";
 
 
 $newStack->pop();
 
-echo $newStack->display()."<br/>";
+echo $newStack->display()."\n";
+
+
+$newStack->reset();
+
+echo $newStack->display()."\n";
