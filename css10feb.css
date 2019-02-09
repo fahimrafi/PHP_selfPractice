@@ -1,0 +1,63 @@
+/*h3{
+    color: red;
+    text-align: center;
+    
+    word-spacing: 10px;
+    text-shadow: 10px 10px 5px burlywood;
+}*/
+
+h2{
+    font-size:2vh;
+
+}
+h3{
+    font-size: 2
+}
+h4{
+    font-size:2vh;
+
+}
+#name{
+    background-color: beige;
+}
+body{
+    padding: 20px;
+}
+#_2nd{
+    border: 2px dashed black;
+}
+
+#_3rd{
+    
+    border-bottom: 2px dashed black;
+    border-top: 2px dashed black;
+}
+#_4th {
+    
+    
+    border:2px solid blueviolet;
+    
+   
+    height: 500px;
+    width:500px;
+    background-color: rgb(235, 130, 130);
+}
+#_4th p{
+    padding: 5px;
+    color:blue;
+    text-align: justify;
+
+}
+#secMain div ol  {
+
+    text-decoration: none;
+    
+    list-style-type: square;
+}
+
+#divThird ul li{
+    text-decoration: underline ;
+    font-weight: bold;
+    font-style: italic;
+
+}
