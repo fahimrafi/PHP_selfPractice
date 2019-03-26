@@ -1,7 +1,7 @@
 <?php
 
-$num1 = "5000";
-$num2 = "9000";
+$num1 = "192";
+$num2 = "193";
 
 
 
@@ -43,8 +43,8 @@ function sub($string_num1,$string_num2)
 
     }
     
-
-    $string_num1 = "00000".$string_num1;
+    
+    //$string_num1 = "00000".$string_num1;
     $add_to_num2= str_repeat("0", strlen($string_num1)-strlen($string_num2));
     $string_num2 = $add_to_num2 . $string_num2;
 
@@ -64,10 +64,10 @@ function sub($string_num1,$string_num2)
     $temp1 = 0;
     for($i=0; $i<strlen($rev_string_num1);$i++)
     {
-        if($rev_num1_int_array[$i]<$rev_num2_int_array[$i])
+        if($rev_num1_int_array[$i]<($rev_num2_int_array[$i]+$carry))
         {            
             $temp1 = (10 + $rev_num1_int_array[$i]) - ($rev_num2_int_array[$i]+$carry);   
-            $carry= $carry + 1;
+            $carry=  1;
         }
         else
         {
@@ -75,7 +75,7 @@ function sub($string_num1,$string_num2)
             $carry = 0; 
         }
         
-        $result_rev_array[$i] = (int)$temp1;     
+        $result_rev_array[$i] = $temp1;     
 
                                             
     }

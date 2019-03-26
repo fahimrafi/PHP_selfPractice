@@ -1,7 +1,7 @@
 <?php
 //Replace this values for your desired calculation
-$num1 = "3628800";
-$num2 = "11";
+$num1 = "55555";
+$num2 = "1000000000000000000000000000000000000000000000000000000000000000000000000";
 
 //function to convert string number to int array;
 function string_to_int_array($string)
@@ -102,4 +102,6 @@ function product($no1,$no2)
     }
 return $res;
 }
+
+
 echo product($num1,$num2);

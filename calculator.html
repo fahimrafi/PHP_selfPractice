@@ -1,82 +1,57 @@
 <!DOCTYPE html>
 
+
 <html>
     <head>
         <title>Calculator</title>
-        <style type="text/css">
-        
-        section {
-            background-color: silver;
-            border: 2px solid black; 
-            width: 80%;
-            padding:20px;
-        }
-        h1{
-            text-align: center;
-        }
-        #display{
-            background-color: #DAE6DA;
-            border: 2px solid rgb(6, 7, 6);                       
-            height: 150px;            
-            overflow: scroll;
-            padding:20px;
-        }
-        .base-display{
-            text-align: right;
-
-        }
-        #input-div{ 
-            margin-top: 20px;
-        }
-        #input-textarea{
-            width: 99%;
-        }
-        #button-iv button{
-            color: white;
-            background-color: #43474A;
-        }
-        </style>
+        <link rel="stylesheet" type="text/css" href="calculator.css">
+        <script type="text/javascript" src="calculator.js"></script>
     </head>
 
     <body>
-
+        <form method="POST" action="calculator.php" target="_blank">
         <section >
-            <h1>Dyamic Calculator</h1>
+            <h1>Calculator</h1>
 
-            <!--Display-->
-            <div>                    
-                <p id="display"> 26529 16320 20061 58245 89220 78468 07958 96532 93425 33649 64021 88525 61906 19834 55589 88452 63222 37589 62211 13923 75798 57893 52203 16238 76984 54946 84213 75700 57117 63983 33786 21931 58588 64088 44919 79178 39897 86005 06635 36633 64723 44949 54534 43741 15983 98422 97364 30513 34893 29022 68576 52837 85033 52259 02895 62797 41410 49363 37874 03976 04518 25103 40464 31777 39402 90592 58572 58729 39720 71106 97622 24806 16808 38891 22123 92732 13737 70980 82229 68300 44381 32003 65297 45682 57476 82000 72458 77739 25684 09235 20173 71338 59657 88005 66797 07662 47095 61457 64143 87523 16814 49395 34043 01674 27804 81099 69913 26122 83293 53133 63309 42441 69811 12157 55500 83082 21251 62743 14019 01690 07932 00186 34234 68413 50661 68315 65907 90213 59794 42306 64758 56186 99303 36498 69024 07864 75836 37199 01027 34537 52775 60505 93731 93559 89309 35108 42309 55663 04485 10112 80701 75275 66279 87841 83183 85824 05653 81657 90921 20055 55622 98766 63542 55342 15313 48039 55690 84001 39028 72816 18592 08601 50310 08722 26619 62279 80999 66483 28849 54050 35302 39732 25631 39119 78849 37825 70144 14197 52761 43655 94964 37811 127</p>
-            </div>
-            <div class="base-display" >
-                    <input type="text" name="" value="">
-            </div>
 
             
-
-            
-            
-            <!-- Input-->
-            <div id="input-div">
-                <textarea id="input-textarea"></textarea>
-            </div>
-
-            <!--Input Base-->
-            <div class="base-display" >
-                    <input type="text" name="" value="">
+                <!--Display-->
+                <div>                    
+                    <p id="display"> </p>
+                </div>
+                <div class="base-display" >
+                        <input type="text" name="" value="">
                 </div>
 
-            <div id="button-div">
-                    <button type="button">C</button> 
-                    <button type="button">+</button> 
-                    <button type="button">-</button> 
-                    <button type="button">*</button> 
-                    <button type="button">/</button> 
-                    <button type="button">n!</button> 
-                    <button type="button">=</button> 
-            </div>
+                
 
+                
+                
+                <!-- Input-->
+                <div id="input-div">
+                        <textarea id="input-textarea"></textarea>
+                </div>
+
+                <!--Input Base-->
+                <div class="base-display" >
+                    <input  type="text" name="" value="">
+                </div>
+
+                <div id="button-div">
+                        
+
+                        <button type="reset" name="submit" value="submit" >C</button> 
+                        <button type="button" name="submit" value="submit" onclick="javascript:sum_buttonclick()">+</button> 
+                        <button type="button" name="submit" value="submit" onclick="javascript:sub_buttonclick()">-</button> 
+                        <button type="button" name="submit" value="submit" onclick="javascript:mul_buttonclick()">*</button> 
+                        <button type="button" name="submit" value="submit" onclick="javascript:div_buttonclick()">/</button> 
+                        <button type="button" name="submit" value="submit" onclick="javascript:fact_buttonclick()">n!</button> 
+                        <button type="button" name="submit" value="submit" onclick="javascript:equal_buttonclick()">=</button> 
+                    
+                </div>
+            
         </section>
-
+        </form>
 
     </body>
 </html>
